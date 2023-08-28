@@ -1,0 +1,30 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    margin-left: 1%;
+    background-color: transparent;
+}
+
+.divbotao {
+    width: 100%;
+}
+
+.borda-vermelha {
+    font-weight: 700;
+    color: #FC5A5A;
+    border: 2px solid #FC5A5A; 
+}
+
