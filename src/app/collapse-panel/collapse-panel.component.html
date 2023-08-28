@@ -1,13 +1,26 @@
 <div class="collapse-panel" *ngIf="isVisible">
-  
-    <div class="panel">
-        <p-panel header="Header" [toggleable]="true">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+  <div class="panel">
+    <p-panel [header]="titulo" expandIcon="pi pi-arrow-up" collapseIcon="pi pi-arrow-down" [toggleable]="true">
+
+          <div class="main-form">
+            <div class="sub-form1">
+              <p>Imagem:</p>
+              <input type="text" disabled [placeholder]="dimensoes">
+              <label for="arquivo">Escolher arquivo</label>
+              <input type="file" accept=".jpg, .png" name="arquivo" id="arquivo" (change)="onFileChange($event)">
+            </div>
+            
+            <div class="sub-form2">
+                <p>Link:</p>
+               <input type="url" id="input-link" placeholder="Insira um link de direcionamento">
+            </div>
+          </div>
+
+          <img *ngIf="croppedImage" [src]="croppedImage" alt="Imagem Recortada">
+
         </p-panel>
     </div>
     
 
 </div>
+

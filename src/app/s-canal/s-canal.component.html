@@ -1,21 +1,20 @@
 <section class="body">
-
-<h2>Selecione o canal da publicação</h2>
-
-<div class="divbotao">
-  <button 
+  <h2>Selecione o canal da publicação</h2>
+  
+  <div class="divbotao">
+    <button 
+      *ngFor="let botao of botoes; let i = index"
+      [class.borda-vermelha]="botao.collapsePanelVisible"
+      (click)="toggleCollapsePanel(i)"
+    >
+      {{ botao.texto }}
+    </button>
+  </div>
+  
+  <app-collapse-panel
     *ngFor="let botao of botoes; let i = index"
-    [class.borda-vermelha]="botao.collapsePanelVisible"
-    (click)="toggleCollapsePanel(i)"
-  >
-    {{ botao.texto }}
-  </button>
-</div>
-
-
-<app-collapse-panel
-  *ngFor="let botao of botoes; let i = index"
-  [isVisible]="botao.collapsePanelVisible"  
-></app-collapse-panel>
-
+    [isVisible]="botao.collapsePanelVisible"
+    [dimensoes]="botao.dimensoes"
+    [titulo]="botao.titulo"
+  ></app-collapse-panel>
 </section>

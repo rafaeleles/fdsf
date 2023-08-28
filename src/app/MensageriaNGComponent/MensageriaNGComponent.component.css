@@ -16,7 +16,7 @@
     max-width: 1011px;
 }
 
-input, #input-link {
+#input-img, #input-link {
     font-family: 'Baloo 2', cursive;
     width: 480px;
     height: 38px;
@@ -35,8 +35,6 @@ input, #input-link {
     margin-left: 2%;
 }
 
-
-
 .sub-form1 {
     text-align: start;
     display: flex;
@@ -44,7 +42,6 @@ input, #input-link {
 }
 
 .sub-form2 {
-    z-index: 2;
     text-align: start;
 }
 
@@ -75,13 +72,4 @@ label {
 
 input[type="file"] {
     display: none;
-}
-
-input::placeholder {
-    padding-left: 0.5rem;
-}
-
-img {
-    margin-top: 1rem;
-    border-radius: 8px;
 }

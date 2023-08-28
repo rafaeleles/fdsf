@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SCanalComponent } from './s-canal/s-canal.component';
 import { CollapsePanelComponent } from './collapse-panel/collapse-panel.component';
+import { MensageriaNGComponentComponent } from './MensageriaNGComponent/MensageriaNGComponent.component';
+import { KeevoCenterComponentComponent } from './KeevoCenterComponent/KeevoCenterComponent.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [					
     AppComponent,
       HeaderComponent,
       SCanalComponent,
-      CollapsePanelComponent
+      CollapsePanelComponent,
+      MensageriaNGComponentComponent,
+      KeevoCenterComponentComponent
    ],
   imports: [
     BrowserModule,
