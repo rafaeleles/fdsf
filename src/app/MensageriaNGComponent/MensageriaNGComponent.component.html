@@ -1,18 +1,28 @@
-<div class="panel">
-  <p-panel header="Mensageria NG" [toggleable]="true">
+<div class="collapse-panel" *ngIf="isVisible">
+  <div class="panel">
+    <p-panel [header]="titulo" expandIcon="pi pi-arrow-up" collapseIcon="pi pi-arrow-down" [toggleable]="true">
 
-    <div class="main-form">
-      <div class="sub-form1">
-          <p>Imagem:</p>
-          <span id="input-img">Dimensão: 805 x 380 | Extensões: .jpg ou .png</span>
-          <label for="arquivo">Escolher arquivo</label>
-          <input type="file" accept=".jpg, .png" name="arquivo" id="arquivo"/>
-      </div>
-      <div class="sub-form2">
-          <p>Link:</p>
-         <input type="url" id="input-link" value="Insira um link de direcionamento">
-      </div>
+          <div class="main-form">
+            <div class="sub-form1">
+              <p>Imagem:</p>
+              <input type="text" disabled [placeholder]="dimensoes">
+              <label for="arquivo">Escolher arquivo</label>
+              <input type="file" accept=".jpg, .png" name="arquivo" id="arquivo" (change)="onFileChange($event)">
+            </div>
+            
+            <div class="sub-form2">
+                <p>Link:</p>
+                <input type="url" id="input-link" placeholder="Insira um link de direcionamento" (input)="onUrlChange($event)">
+              </div>
+          </div>
+
+          <h1 *ngIf="croppedImage"> Pré-visualização: </h1>
+          <img *ngIf="croppedImage" [src]="croppedImage" alt="Imagem Recortada">
+          <p *ngIf="urlValue"><a [href]="urlValue" target="_blank">{{ urlValue }}</a></p>
+
+        </p-panel>
     </div>
+    
 
-  </p-panel>
 </div>
+

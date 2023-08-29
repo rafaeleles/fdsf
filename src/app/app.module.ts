@@ -7,20 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { SCanalComponent } from './s-canal/s-canal.component';
-import { CollapsePanelComponent } from './collapse-panel/collapse-panel.component';
 import { MensageriaNGComponentComponent } from './MensageriaNGComponent/MensageriaNGComponent.component';
 import { KeevoCenterComponentComponent } from './KeevoCenterComponent/KeevoCenterComponent.component';
+import { CaduComponentComponent } from './CaduComponent/CaduComponent.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [								
     AppComponent,
-      HeaderComponent,
       SCanalComponent,
-      CollapsePanelComponent,
       MensageriaNGComponentComponent,
-      KeevoCenterComponentComponent
+      KeevoCenterComponentComponent,
+      CaduComponentComponent
    ],
   imports: [
     BrowserModule,

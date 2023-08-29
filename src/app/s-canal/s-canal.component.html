@@ -9,12 +9,45 @@
     >
       {{ botao.texto }}
     </button>
+
+    <button 
+    *ngFor="let botao of botoes1; let i = index"
+    [class.borda-vermelha]="botao.collapsePanelVisible1"
+    (click)="toggleCollapsePanel1(i)"
+  >
+    {{ botao.texto }}
+   </button>
+
+   <button 
+    *ngFor="let botao of botoes2; let i = index"
+    [class.borda-vermelha]="botao.collapsePanelVisible2"
+    (click)="toggleCollapsePanel2(i)"
+  >
+    {{ botao.texto }}
+   </button>
+
   </div>
   
-  <app-collapse-panel
-    *ngFor="let botao of botoes; let i = index"
+
+
+  <app-MensageriaNGComponent
+  *ngFor="let botao of botoes; let i = index"
     [isVisible]="botao.collapsePanelVisible"
     [dimensoes]="botao.dimensoes"
     [titulo]="botao.titulo"
-  ></app-collapse-panel>
+  ></app-MensageriaNGComponent>
+
+  <app-KeevoCenterComponent
+  *ngFor="let botao of botoes1; let i = index"
+    [isVisible1]="botao.collapsePanelVisible1"
+    [dimensoes]="botao.dimensoes"
+    [titulo]="botao.titulo"
+  ></app-KeevoCenterComponent>
+
+  <app-CaduComponent
+  *ngFor="let botao of botoes2; let i = index"
+    [isVisible2]="botao.collapsePanelVisible2"
+    [titulo]="botao.titulo"
+  ></app-CaduComponent>
+
 </section>

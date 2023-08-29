@@ -17,23 +17,54 @@
     border: 1px solid #414141;
 }
 
+:host ::ng-deep .panel-header-red .p-panel-header {
+    background-color: #FC5A5A;
+}
+  
+
 .panel {
     max-width: 1011px;
 }
 
-h1 {
+.main-form {
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=text] {
+    width: 460px;
+    height: 100px;
+    border-radius: 9px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+.sub-form1, .sub-form2 {
     color: #000;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
     font-family: 'Baloo 2', cursive;
-    font-size: 22px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
 }
 
+input::placeholder {
+    padding-left: 0.5rem;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    color: #495057;
+}   
+
 input, #input-link {
     font-family: 'Baloo 2', cursive;
-    width: 480px;
+    width: 460px;
     height: 38px;
     line-height: 2.3rem;
     border-radius: 9px;
@@ -46,59 +77,37 @@ input, #input-link {
     background: #FFF;
 }
 
-#input-link {
-    margin-left: 2%;
+.linee {
+    width: 1px;
+    height: 256px;
+    background: #000;
 }
 
-
-
 .sub-form1 {
-    text-align: start;
-    display: flex;
-    flex-direction: column;
+    margin-right: 1rem;
 }
 
 .sub-form2 {
-    z-index: 2;
-    text-align: start;
+    margin-left: 1rem;
 }
 
-.sub-form2 p {
-    margin-left: 2%;    
+p {
+    margin-left: 5%;
 }
 
-.main-form {
-    display: flex;
-    flex-direction: row;
+h1 {
+    margin-left: 5%;
+
 }
 
-label {
+h2 {
+    margin-left: 5%;
+    color: #000;
     font-family: 'Baloo 2', cursive;
     font-size: 14px;
     font-style: normal;
-    text-align: center;
+    font-weight: 400;
     line-height: 24px;
-    margin-top: 3%;
-    font-weight: 600;
-    width: 130px;
-    height: 29px;
-    color: #FFFFFF;
-    border-radius: 20px;
-    border: 1px solid #FC5A5A;
-    background: #FC5A5A;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-input::placeholder {
-    padding-left: 0.5rem;
-}
-
-img {
-    margin-top: 1rem;
-    border-radius: 8px;
 }
 
 a {
@@ -106,4 +115,11 @@ a {
     font-family: 'Baloo 2', cursive;
     font-size: 14px;
     font-weight: 400;
+}
+
+.pre-visualizacao {
+    margin-top: 5%;
+    border-radius: 8px;
+    background: rgba(217, 217, 217, 0.50);
+
 }
