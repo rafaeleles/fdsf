@@ -80,4 +80,8 @@ export class MensageriaNGComponentComponent implements OnInit {
     this.urlValue = urlValue;
   }
 
+  areInputsFilled(): boolean {
+    return !!this.croppedImage && !!this.urlValue 
+  }
+
 }

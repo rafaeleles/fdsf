@@ -76,6 +76,9 @@ export class KeevoCenterComponentComponent implements OnInit {
     this.urlValue = urlValue;
   }
   
+  areInputsFilled(): boolean {
+    return !!this.croppedImage1 && !!this.urlValue 
+  }
 
   ngOnInit() {
   }

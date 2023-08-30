@@ -1,6 +1,6 @@
 <div class="collapse-panel" *ngIf="isVisible">
   <div class="panel">
-    <p-panel [header]="titulo" expandIcon="pi pi-arrow-up" collapseIcon="pi pi-arrow-down" [toggleable]="true">
+    <p-panel [header]="titulo" expandIcon="pi pi-arrow-up" collapseIcon="pi pi-arrow-down" [toggleable]="true" [ngClass]="{'panel-header-red': areInputsFilled()}">
 
           <div class="main-form">
             <div class="sub-form1">

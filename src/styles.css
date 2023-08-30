@@ -6,3 +6,7 @@
 body {
   font-family: 'Baloo 2', cursive;
 }
+
+.pi-arrow-up, .pi-arrow-down {
+  color: #FFF;
+}
