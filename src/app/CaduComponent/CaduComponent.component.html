@@ -1,15 +1,15 @@
 <div class="collapse-panel" *ngIf="isVisible2">
   <div class="panel">
-    <p-panel [header]="titulo" expandIcon="pi pi-arrow-up" collapseIcon="pi pi-arrow-down" [toggleable]="true" [ngClass]="{'panel-header-red': areInputsFilled()}">
+    <p-panel [header]="titulo" expandIcon="pi pi-angle-up" collapseIcon="pi pi-angle-down" [toggleable]="true" [ngClass]="{'panel-header-red': areInputsFilled()}">
 
           <div class="main-form">
             <div class="sub-form1">
               <label for="chat">Mensagem CHAT:</label>
-              <input type="text" name="chat" id="chat" placeholder="Digite o texto da mensagem" (input)="onTextChatChange($event)">
+              <textarea name="chat" id="chat" placeholder="Digite o texto da mensagem" (input)="onTextChatChange($event)"> </textarea>
               <h2>Link:</h2>
               <input type="url" id="input-link" placeholder="Insira um link de direcionamento" (input)="onUrlChange($event)">
+              <h1 *ngIf="textValue || urlValue">Pré-visualização:</h1>
               <div *ngIf="textValue || urlValue" class="pre-visualizacao">
-                <h1>Pré-visualização:</h1>
                 <h2 *ngIf="textValue">{{ textValue }}</h2>
                 <p *ngIf="urlValue"><a [href]="urlValue" target="_blank">{{ urlValue }}</a></p>
               </div>
@@ -19,11 +19,11 @@
 
             <div class="sub-form2">
               <label for="notificacao">Notificação ao cliente:</label>
-              <input type="text" name="notificacao" id="notificacao" placeholder="Digite o texto da mensagem" (input)="onTextNotificacaoChange($event)">
+              <textarea name="notificacao" id="notificacao" placeholder="Digite o texto da Notificação" (input)="onTextNotificacaoChange($event)"> </textarea>
               <p>Link:</p>
               <input type="url" id="input-link" placeholder="Insira um link de direcionamento" (input)="onUrlChange2($event)">
+              <h1 *ngIf="textValue2 || urlValue2">Pré-visualização:</h1>
               <div *ngIf="textValue2 || urlValue2" class="pre-visualizacao">
-                <h1>Pré-visualização:</h1>
                 <p *ngIf="textValue2">{{ textValue2 }}</p>
                 <p *ngIf="urlValue2"><a [href]="urlValue2" target="_blank">{{ urlValue2 }}</a></p>
             </div>
